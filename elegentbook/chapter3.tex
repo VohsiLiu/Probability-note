@@ -1,0 +1,25 @@
+\chapter{多维随机变量及其分布}
+
+\section{二维随机变量}
+\begin{definition}[联合分布函数]
+    设$(X,Y)$是二维随机变量，对于任意实数$x,y$，二元函数
+    $$F(x,y)=P\{(X\leq x)\cap(Y\leq y)\} \equiv P\{X\leq x,Y\leq y\}$$
+    称为二维随机变量$(X,Y)$的{\heiti 分布函数}，或称为随机变量$X$和$Y$的{\heiti 联合分布函数}。
+
+    如果将二维随机变量$(X,Y)$看成是平面上随机点的坐标，那么分布函数$F(x,y)$在$(x,y)$处的函数值就是随机点
+    $(X,Y)$落在以点$(x,y)$为顶点而位于该点左下方的无穷矩形区域内的概率。
+    \\所以，随机点$(X,Y)$落在矩形区域$\{(x,y)|x_1<x\leq x_2,y_1<y\leq y_2\}$的概率为
+    $$P\{x_1<x\leq x_2,y_1<y\leq y_2\}=F(x_2,y_2)-F(x_2,y_1)+F(x_1,y_1)-F(x_1,y_2)$$
+\end{definition}
+
+\begin{definition}[联合概率密度]
+    对于二维随机变量$(X,Y)$的分布函数$F(x,y)$，如果存在非负可积函数$f(x,y)$使对于任意$x,y$有
+    $$F(x,y)=\int_{-\infty}^{y}\int_{-\infty}^x f(u,v)\,dudv$$
+    则称$(X,Y)$是{\heiti 连续型的二维随机变量},函数$f(x,y)$称为二维随机变量$(X,Y)$的{\heiti 概率密度}，
+    或称为随机变量$X$和$Y$的{\heiti 联合概率密度}。
+\end{definition}
+
+\section{边缘分布}
+\begin{definition}
+    
+\end{definition}

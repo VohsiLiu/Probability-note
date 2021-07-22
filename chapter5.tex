@@ -1,0 +1,67 @@
+\section{大数定律及中心极限定理}
+\subsection{大数定律}
+
+\begin{theorem}[弱大数定理(辛钦大数定理)]
+    设$X_1,X_2,\cdots$是相互独立的，服从同一分布的随机变量序列，且具有数学期望$E(X_k)=\mu (k=1,2,\cdots)$。
+    作前$n$个变量的算数平均$\displaystyle{\frac{1}{n} \sum_{k=1}^n X_k }$，则对于任意$\varepsilon>0$，有
+    $$\lim_{n\to \infty} P \left\{ \left\lvert  \frac{1}{n} \sum_{k=1}^n X_k-\mu \right\rvert <\varepsilon \right\} =1 $$
+\end{theorem}
+
+\begin{definition}
+    设$Y_1,Y_2,\cdots,Y_n,\cdots$是一个随机变量序列，$a$是一个常数。若对于任意正数$\varepsilon$，有
+    $$\lim_{n\to \infty} P \left\{ \left\lvert Y_n-a \right\rvert <\varepsilon \right\} =1 $$
+    则称序列$Y_1,Y_2,\cdots,Y_n,\cdots${\heiti 依概率收敛于$a$}，记为
+    $$Y_n \stackrel{P}{\longrightarrow} a$$
+\end{definition}
+
+\begin{theorem}[弱大数定理(辛钦大数定理)]
+    设随机变量$X_1,X_2,\cdots$相互独立，服从同一分布，且具有数学期望$E(X_k)=\mu (k=1,2,\cdots)$，则
+    序列$\displaystyle{\overline{X}=\frac{1}{n}\sum _{k=1}^n X_k}$依概率收敛于$\mu$，即$\overline{X} \stackrel{P}{\longrightarrow} a$
+\end{theorem}
+
+\begin{theorem}[伯努利大数定理]
+    设$f_A$是$n$次独立重复试验中事件$A$发生的次数，$p$是事件$A$在每次试验中发生的概率，则对于任意正数$\varepsilon>0$，有
+    $$\lim_{n\to \infty} P \left\{ \left\lvert  \frac{f_A}{n}-p  \right\rvert <\varepsilon \right\} =1 $$或
+    $$\lim_{n\to \infty} P \left\{ \left\lvert  \frac{f_A}{n}-p  \right\rvert \geq \varepsilon \right\} =0 $$
+\end{theorem}
+
+\subsection{中心极限定理}
+\begin{theorem}[独立同分布的中心极限定理]
+    设随机变量$X_1,X_2,\cdots,X_n,\cdots$相互独立，服从同一分布，且具有数学期望和方差：$E(X_k)=\mu,D(X_k)=\sigma^2>0(k=1,2,\cdots),$则随机变量
+    之和$\boldsymbol{\sum _{k=1}^n X_k}$的标准化变量
+    $$Y_n=\frac{\sum\limits _{k=1}^n X_k-E(\sum\limits _{k=1} ^n X_k)}{\sqrt{D(\sum\limits_{k=1}^n X_k)}}=\frac{\sum\limits_{k=1}^n X_k-n\mu}{\sqrt{n}\sigma}$$
+    的分布函数$F_n(x)$对于任意$x$满足
+    $$\lim _{n\to\infty} F_n(x)=\lim _{n\to \infty}P\left\{ \frac{\sum\limits_{k=1}^n X_k-n\mu}{\sqrt{n}\sigma}\leq x\right\}=\int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}} e^{-t^2/2}\,dt=\varPhi (x)  $$
+\end{theorem}
+\begin{remark}
+    该定理表明，均值为$\mu$，方差为$\sigma^2>0$的独立同分布的随机变量$X_1,X_2,\cdots,X_n$之和$\displaystyle{\sum _{k=1}^n X_k}$的标准化变量，当$n$充分大时，有
+    $$\frac{\sum\limits_{k=1}^n X_k -n\mu}{\sqrt{n}\sigma}\sim N(0,1) $$
+    也可改写为$$\frac{\overline{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1) \quad \mbox{或} \quad \overline{X}\sim N(\mu,\sigma^2/n)$$
+\end{remark}
+
+\begin{theorem}[李雅普诺夫(Lyapunov)定理]
+    设随机变量$X_1,X_2,\cdots,X_n,\cdots$相互独立，它们具有数学期望和方差$E(X_k)=\mu, D(X_k)=\sigma_k^2>0,k=1,2,\cdots$，记$\displaystyle{B_n^2=\sum_{k=1}^n\sigma_k^2}$。
+    若存在整数$\delta$，使得当$n\to \infty$时，
+    $$\frac{1}{B_n^{2+\delta}}\sum_{k=1}^n E\{{|X_k-\mu_k|}^{2+\delta}\} \to 0,$$
+    则随机变量之和$\displaystyle{\sum _{k=1}^n X_k}$的标准化变量
+    $$Z_n=\frac{\sum\limits _{k=1}^n X_k-E(\sum\limits _{k=1} ^n X_k)}{\sqrt{D(\sum\limits_{k=1}^n X_k)}}=\frac{\sum\limits_{k=1}^n X_k-\sum\limits_{k=1}^n \mu_k}{B_n}$$
+    的分布函数$F_n(x)$对任意$x$，满足
+    $$\lim_{n\to\infty} F_n(x)=\lim_{n\to\infty} P\left\{  \frac{\sum\limits_{k=1}^n X_k-\sum\limits_{k=1}^n \mu_k}{B_n}\leq x  \right\} =\int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}} e^{-t^2/2}\,dt=\varPhi (x) $$
+\end{theorem}
+
+\begin{remark}
+    该定理表明，在定理的条件下，随机变量 $$Z_n=\frac{\sum\limits_{k=1}^n X_k-\sum\limits_{k=1}^n \mu_k}{B_n}$$
+    当$n$很大时，近似地服从正态分布$N(0,1)$。由此，当$n$很大时，$\displaystyle{\sum_{k=1}^n X_k=B_nZ_n+\sum_{k=1}^n \mu_k}$
+    近似地服从正态分布$\displaystyle{N(\sum_{k=1}^n\mu_k,B_n^2)}$。这也就是说，无论各个随机变量$X_k(k=1,2,\cdots)$服从什么分布，
+    只要满足定理的条件，那么它们的和$\displaystyle{\sum_{k=1}^nX_k}$当$n$很大时，就近似地服从正态分布。
+\end{remark}
+
+\begin{theorem}[棣莫弗-拉普拉斯(De Moivre-Laplace)定理]
+    设随机变量$\eta_n(n=1,2,\cdots)$服从参数为$n,p(0<p<1)$的二项分布，则对于任意$x$，有
+    $$\lim_{n\to\infty}P\left\{   \frac{\eta_n-np}{\sqrt{np(1-p)}}\leq x\right\} =\int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}} e^{-t^2/2}\,dt=\varPhi (x) $$
+\end{theorem}
+
+\begin{remark}
+    该定理表明，正态分布时二项分布的极限分布。当$n$充分大时，可以用该定理计算二项分布的概率。
+\end{remark}
+

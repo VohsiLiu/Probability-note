@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%
+%%只需要将section改为chapter，将subsection改为section
+%%%%%%%%%%%%%%
+
+\documentclass[cn,10pt,math=newtx,citestyle=gb7714-2015,bibstyle=gb7714-2015]{elegantbook}
+\title{\Huge \color{black} 概率论与数理统计笔记}
+
+\author{\lishu \color{black} 刘承杰}
+\institute{\lishu \color{black} 南京大学软件学院}
+\date{\color{black} \zhtoday}
+\cover{cover.jpg}
+
+\usepackage{array}
+\usepackage{exscale}
+
+\usepackage{relsize}
+\begin{document}
+
+\maketitle
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+\input{chapter1.tex}
+\clearpage
+\input{chapter2.tex}
+\clearpage
+\input{chapter3.tex}
+
+\end{document}

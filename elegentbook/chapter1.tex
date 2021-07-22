@@ -1,0 +1,178 @@
+\chapter{概率论的基本概念}
+
+\section{随机试验}
+
+\begin{definition}[随机试验]
+  在概率论中，我们将具有以下三个特点的试验称为随机试验：
+  \begin{enumerate}
+    \item 可以在相同的条件下重复的进行；
+    \item 每次试验的可能结果不止一个，并且能事先明确试验的所有可能结果；
+    \item 进行一次试验之前不能确定哪个结果会出现
+  \end{enumerate}
+\end{definition}
+
+\section{样本空间、随机事件}
+
+\begin{definition}[样本空间]
+  随机事件$E$的所有可能结果组成的集合，记为$S$
+\end{definition}
+
+\begin{definition}[样本点]
+  样本空间的元素，即$E$的每个结果
+\end{definition}
+
+\begin{definition}[随机事件]
+  试验$E$的样本空间$S$的子集为$E$的随机事件，简称{\heiti 事件}.
+  在每次试验中，当且仅当这一子集中的一个样本点出现时，称这一{\heiti 事件发生}
+\end{definition}
+
+\begin{definition}[基本事件]
+  由一个样本点组成的单点集，称为基本事件
+\end{definition}
+
+\begin{definition}[必然事件和不可能事件]
+  样本空间$S$包含所有的样本点，它是$S$自身的子集，在每次试验中它总是发生的，$S$称为
+  {\heiti 必然事件}.空集$\emptyset$不包含任何样本点，它也作为样本空间的子集，它在
+  每次试验中都不可能发生，$\emptyset$称为{\heiti 不可能事件}.
+\end{definition}
+
+\begin{definition}[事件间的关系与事件的运算]
+  设试验$E$的样本空间为$S$,而$A,B,A_k (k=1,2,\cdots)$是$S$的子集.
+  \begin{enumerate}
+    \item 若$A\subset B$,则称事件$B${\heiti 包含}事件$A$,这指的是事件$A$发生，则事件$B$必然发生。
+    若$A \subset B$且$B \subset A$,即$A=B$,则称事件$A$与事件$B${\heiti 相等}。
+    \item 事件$A \cup B=\{x|x\in A \mbox{或} x \in B\} $称为事件$A$与事件$B$的{\heiti 和事件}。
+    当且仅当$A,B$中至少有一个发生时，事件$A \cup B$发生。
+
+    类似地，称$\bigcup\limits_{k=1}^n A_k$为$n$个事件$A_1,A_2,\cdots,A_n$的和事件；称
+    $\bigcup\limits_{k=1}^{\infty}A_k$为可列个事件$A_1,A_2,\cdots$的和事件
+    \item 事件$A \cap B=\{x|x\in A \mbox{且} x \in B\} $称为事件$A$与事件$B$的{\heiti 积事件}。
+    当且仅当$A,B$同时发生时，事件$A \cap B$发生。
+
+    类似地，称$\bigcap\limits_{k=1}^n A_k$为$n$个事件$A_1,A_2,\cdots,A_n$的积事件；称
+    $\bigcap\limits_{k=1}^{\infty}A_k$为可列个事件$A_1,A_2,\cdots$的积事件
+    \item 事件$A-B=\{x|x\in A \mbox{且}x\notin B\}$称为事件$A$与事件$B$的{\heiti 差事件}。当且仅当
+    $A$发生、$B$不发生时事件$A-B$发生。
+    \item 若$A \cap B=\emptyset$,则称事件$A$与$B$是互不相容的，或{\heiti 互斥的}。这指的是事件$A$与$B$
+    不能同时发生。基本事件是两两互不相容的。
+    \item 若$A\cup B=S$且$A \cap B=\emptyset$,则称事件$A$与事件$B$互为{\heiti 逆事件}，又称事件$A$与事件$B$
+    互为{\heiti 对立事件}。这指的是对每次试验而言，事件$A$、$B$中必有一个发生，且仅有一个发生。$A$的对立事件记为$\overline{A}$ 
+  \end{enumerate}
+\end{definition}
+
+\begin{theorem}[集合运算定律]
+  设$A$、$B$、$C$为事件，则有：
+  
+  交换律：
+  $$A \cup B=B\cup A$$
+  $$A\cap B=B\cap A$$ 
+  
+  结合律：
+  $$A\cup (B\cup C)=(A\cup B)\cup C$$
+  $$A\cap (B\cap C)=(A\cap B)\cap C$$
+  
+  分配律：
+  $$A \cup(B\cap C)=(A \cup B)\cap(A\cup C)$$
+  $$A \cap(B\cup C)=(A \cap B)\cap(A\cap C)$$
+
+
+  德摩根律：
+  $$\overline{A\cup B}=\overline{A}\cap\overline{B}$$
+  $$\overline{A\cap B}=\overline{A}\cup\overline{B}$$
+\end{theorem}
+
+\section{频率与概率}
+\begin{definition}[频率]
+  在相同的条件下，进行了$n$次试验，在这$n$次试验中，事件$A$发生的次数$n_A$称为事件$A$发生的频数。
+  比值$\frac{n_A}{n}$称为事件$A$发生的频率，并记为$f_n(A)$. 
+\end{definition}
+
+
+\begin{definition}[概率]
+  设$E$是随机试验，$S$是它的样本空间，对于$E$的每一个事件$A$赋予一个实数，记为$P(A)$，称
+  为事件$A$的概率，
+  如果集合函数$P(\cdot)$满足下列条件：
+  \begin{enumerate}
+    \item {\heiti 非负性：}对于每一个事件$A$，有$P(A)\geq 0$;
+    \item {\heiti 规范性：}对于必然事件$S$,有$P(S)=1$;
+    \item {\heiti 可列可加性：}设$A_1,A_2,\cdots$是两两不相容的事件，即对于$A_iA_j=\emptyset,i\neq j,i,j=1,2,\cdots,$有
+    $$P(A_1\cup A_2\cup\cdots)=P(A_1)+P(A_2)+\cdots$$
+  \end{enumerate}
+  当$n\to \infty$时频率$f_n(A)$在一定意义下接近于概率$P(A)$
+\end{definition}
+
+\section{等可能概型（古典概型）}
+\begin{definition}[等可能概型]
+  具有以下两个特点的试验称为等可能概型：
+  \begin{enumerate}
+    \item 试验的样本空间只包含有限个元素；
+    \item 试验中每个基本事件发生的可能性相同。
+  \end{enumerate}
+\end{definition}
+
+\begin{theorem}[等可能概型中事件$A$的概率计算公式]
+  若事件$A$包含$K$个基本事件，即$A={e_{i_1}}\cup{e_{i_2}}\cup\cdots\cup{e_{i_k}}$,
+  这里$i_1,i_2,\cdots,i_k$是$1,2\cdots,n$中某$k$个不同的数，则有：
+  $$P(A)=\sum_{j = 1}^{k}P(\{e_{i_j}\})=\frac{k}{n}=\frac{A\mbox{包含的基本事件数}}{S\mbox{中基本事件的总数}}$$  
+\end{theorem}
+
+\begin{theorem}[超几何分布的概率公式]
+  设共有$N$件产品，其中有$D$件次品，从中取$n$件，其中恰好有$k(k\leq D)$件次品的概率为：
+  $$p=\frac{\binom{D}{k}\binom{N-D}{n-k}}{\binom{N}{n} }$$
+\end{theorem}
+
+\section{条件概率}
+\begin{definition}[条件概率]
+  设$A,B$是两个事件，且$P(A)>0$，称
+  $$P(B|A)=\frac{P(AB)}{P(A)}$$
+  为在事件$A$发生的条件下事件$B$发生的条件概率。
+\end{definition}
+
+\begin{theorem}[乘法定理]
+  设$P(A)>0$,则有
+  $$P(AB)=P(B|A)P(A)$$
+  上式可以推广到多个事件的积事件的情况。例如，设$A,B,C$为事件，且$P(AB)>0$,则有
+  $$P(ABC)=P(C|AB)P(B|A)P(A)$$
+  一般地，设$A_1,A_2,\cdots,A_n$为$n$个事件，$n\geq 2$,且$P(A_1A_2\cdots A_{n-1})>0$,则有
+  $$P(A_1A_2\cdots A_n)=P(A_n|A_1A_2\cdots A_{n-1})P(A_{n-1}|A_1A_2\cdots A_{n-2})\cdots P(A_2|A_1)P(A_1)$$
+\end{theorem}
+
+\begin{definition}[样本空间的划分]
+  设$S$为试验$E$的样本空间，$B_1,B_2,\cdots,B_n$为$E$的一组事件，若
+  \begin{enumerate}
+    \item $B_iB_j=\emptyset,i\neq j,i,j=1,2,\cdots,n$
+    \item $B_1\cup B_2\cup\cdots\cup B_n=S$
+  \end{enumerate}
+  则称$B_1,B_2,\cdots,B_n$为样本空间的一个划分。
+
+  若$B_1,B_2,\cdots,B_n$为样本空间的一个划分，那么对于每次试验，事件$B_1,B_2,\cdots,B_n$中必有且只有一个发生。
+\end{definition}
+
+\begin{theorem}[全概率公式]
+  设试验$E$的样本空间为$S$，$A$为$E$的事件，$B_1,B_2,\cdots,B_n$为$S$的一个划分，且$P(B_i)>0,i=1,2,\cdots,n$,
+  则
+  $$P(A)=P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+\cdots+P(A|B_n)P(B_n)$$
+\end{theorem}
+
+\begin{theorem}[贝叶斯(Bayes)公式]
+  设试验$E$的样本空间为$S$,$A$为$E$的事件，$B_1,B_2,\cdots,B_n$为$S$的一个划分，且$P(A)>0$,
+  $P(B_i)>0,i=1,2,\cdots,n$,则
+  $$P(B_i|A)=\frac{P(B_iA)}{P(A)}=\frac{P(A|B_i)P(B_i)}{\sum\limits_{j=1}^{n} P(A|B_j)P(B_j)},i=1,2,\cdots,n$$ 
+\end{theorem}
+
+\section{独立性}
+\begin{definition}[独立性]
+  设$A,B$是两事件，如果满足等式
+  $$P(AB)=P(A)P(B)$$
+  则称事件$A,B$相互独立
+
+  同理，对于$A,B,C$三个事件，如果满足等式
+  $$P(AB)=P(A)P(B)$$
+  $$P(BC)=P(B)P(C)$$
+  $$P(AC)=P(A)P(C)$$
+  $$P(ABC)=P(A)P(B)P(C)$$
+  则称事件$A,B,C$相互独立。
+
+  一般地，设$A_1,A_2,\cdots,A_n$是$n(n\geq 2)$个事件，如果对于其中任意2个，任意3个，$\cdots$,任意
+  $n$个事件的积事件的概率都等于各事件概率的积，则称事件$A_1,A_2,\cdots,A_n$相互独立。
+\end{definition}
