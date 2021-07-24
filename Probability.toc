@@ -27,3 +27,5 @@
 \contentsline {subsection}{\numberline {5.2}中心极限定理}{16}{subsection.5.2}%
 \contentsline {section}{\numberline {6}样本及抽样分布}{19}{section.6}%
 \contentsline {subsection}{\numberline {6.1}随机样本}{19}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}直方图和箱线图}{19}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}抽样分布}{19}{subsection.6.3}%
