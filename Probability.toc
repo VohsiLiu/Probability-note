@@ -29,3 +29,5 @@
 \contentsline {subsection}{\numberline {6.1}随机样本}{19}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}直方图和箱线图}{19}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}抽样分布}{19}{subsection.6.3}%
+\contentsline {section}{\numberline {7}参数估计}{24}{section.7}%
+\contentsline {subsection}{\numberline {7.1}点估计}{24}{subsection.7.1}%
