@@ -100,7 +100,7 @@
   \setlength\parindent{2\ccwd}}
   }{\relax}
 
-  \renewcommand*{\d}{\mathop{}\!d}
+
 \ifcsname kaishu\endcsname
   \newcommand{\citshape}{\kaishu}
 \else
@@ -436,7 +436,7 @@
   \fi
 	\ifx\@date\empty
 	\else 
-    {\normalfont\citshape\updatetext\@date}%
+    {\normalfont\citshape\@date}%
   \fi
   \end{center}%
   \par}

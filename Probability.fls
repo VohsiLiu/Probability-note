@@ -1562,6 +1562,10 @@ INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong62.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei4f.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong70.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong4f.tfm
+INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei50.tfm
+INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei9a.tfm
+INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei5d.tfm
+INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei56.tfm
 OUTPUT Probability.toc
 INPUT ./chapter1.tex
 INPUT chapter1.tex
@@ -1576,7 +1580,6 @@ INPUT d:/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei96.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei67.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei8b.tfm
-INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei9a.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei9a.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai57.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai69.tfm
@@ -1643,7 +1646,6 @@ INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai71.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai30.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai7c.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei79.tfm
-INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei5d.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei90.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai8a.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
@@ -1750,7 +1752,6 @@ INPUT ./chapter6.tex
 INPUT chapter6.tex
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei68.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei62.tfm
-INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei50.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei56.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei54.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong75.tfm
@@ -1762,7 +1763,6 @@ INPUT ./1.jpg
 INPUT 1.jpg
 INPUT ./1.jpg
 INPUT ./1.jpg
-INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei56.tfm
 INPUT ./2.jpg
 INPUT ./2.jpg
 INPUT 2.jpg
@@ -1785,6 +1785,18 @@ INPUT chapter7.tex
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei4f.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei70.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei4f.tfm
+INPUT ./chapter8.tex
+INPUT chapter8.tex
+INPUT ./chapter8.tex
+INPUT chapter8.tex
+INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei50.tfm
+INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei9a.tfm
+INPUT ./chapter9.tex
+INPUT chapter9.tex
+INPUT ./chapter9.tex
+INPUT chapter9.tex
+INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei5d.tfm
+INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei56.tfm
 INPUT Probability.aux
 INPUT ./Probability.out
 INPUT ./Probability.out
@@ -1794,8 +1806,6 @@ INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
-INPUT c:/Windows/Fonts/simhei.ttf
-INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
@@ -1826,7 +1836,6 @@ INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
-INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
@@ -1884,6 +1893,9 @@ INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
+INPUT c:/Windows/Fonts/simhei.ttf
+INPUT c:/Windows/Fonts/simhei.ttf
+INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simsun.ttc
