@@ -1785,6 +1785,8 @@ INPUT chapter7.tex
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei4f.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei70.tfm
 INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei4f.tfm
+INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai83.tfm
+INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai86.tfm
 INPUT ./chapter8.tex
 INPUT chapter8.tex
 INPUT ./chapter8.tex
@@ -1800,6 +1802,8 @@ INPUT d:/texlive/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei56.tfm
 INPUT Probability.aux
 INPUT ./Probability.out
 INPUT ./Probability.out
+INPUT c:/Windows/Fonts/simkai.ttf
+INPUT c:/Windows/Fonts/simkai.ttf
 INPUT d:/texlive/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc
 INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simsun.ttc

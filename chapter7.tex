@@ -1,3 +1,77 @@
 \section{参数估计}
 \subsection{点估计}
 
+\begin{definition}
+    点估计问题的一般提法如下：设总体$X$的分布函数$F(x;\theta)$的形式为已知，$\theta$是待估
+    参数.$X_1,X_2,\cdots,X_n$是$X$的一个样本，$x_1,x_2,\cdots,x_n$是相应的一个样本值.
+    点估计问题就是要构造一个适当的统计量$\hat{\theta}(X_1,X_2,\cdots,X_n)$，用它的观察值
+    $\hat{\theta}(x_1,x_2,\cdots,x_n)$作为未知参数$\theta$的近似值。称$\hat{\theta}(X_1,X_2,\cdots,X_n)$
+    为$\theta$的{\heiti 估计量}，称$\hat{\theta}(x_1,x_2,\cdots,x_n)$为$\theta$的{\heiti 估计值}。
+    在不致混淆的情况下统称估计量和估计值为{\heiti 估计}.
+\end{definition}
+
+\begin{definition}[矩估计法]
+    设$X$为连续型随机变量，其概率密度为$f(x;\theta_1,\theta_2,\cdots,\theta_k)$，或$X$为离散型随机变量，
+    其分布律为$P\{X=x\}=p(x;\theta_1,\theta_2,\cdots,\theta_k)$，其中$\theta_1,\theta_2,\cdots,\theta_k$
+    为待估参数，$X_1,X_2,\cdots,X_n$是来自$X$的样本.假设总体$X$的前$k$阶矩
+    $$\mu_l=E(X^l)=\int_{-\infty}^\infty x^lf(x;\theta_1,\theta_2,\cdots,\theta_k)\,dx\quad X\mbox{为连续型}$$
+    或
+    $$\mu_l=E(X^l)=\sum_{x\in R_X}x^lp(x;\theta_1,\theta_2,\cdots,\theta_k)\quad X\mbox{为离散型}$$
+    （$l=1,2,\cdots,k$,其中$R_X$是$X$可能取值的范围）存在。一般来说，它们是$\theta_1,\theta_2,\cdots,\theta_k$
+    的函数.基于样本矩
+    $$A_l=\frac{1}{n}\sum_{i=1}^nX_i^l$$
+    依概率收敛于相应的总体矩$\mu_l(l=1,2,\cdots,k)$，样本矩的连续函数依概率收敛于相应的总体矩的连续函数，我们就用样本矩
+    作为相应的总体矩的估计量，而以样本矩的连续函数作为相应的总体矩的连续函数的估计量。这种估计方法称为{\heiti 矩估计法}。
+
+    矩估计法的具体做法如下：设
+    $$\left\{\begin{array}{l}
+        \mu_1=\mu_1(\theta_1,\theta_2,\cdots,\theta_k),\\
+        \mu_2=\mu_2(\theta_1,\theta_2,\cdots,\theta_k),\\
+        \vdots\\
+        \mu_k=\mu_k(\theta_1,\theta_2,\cdots,\theta_k),\\
+    \end{array}\right.$$
+    这是一个包含$k$个未知参数$\theta_1,\theta_2,\cdots,\theta_k$的联立方程组。一般来说，可以从中解出$\theta_1,\theta_2,\cdots,\theta_k$，
+    得到
+    $$\left\{\begin{array}{l}
+        \theta_1=\theta_1(\mu_1,\mu_2,\cdots,\mu_k),\\
+        \theta_2=\theta_2(\mu_1,\mu_2,\cdots,\mu_k),\\
+        \vdots\\
+        \theta_k=\theta_k(\mu_1,\mu_2,\cdots,\mu_k),\\
+    \end{array}\right.$$
+    以$A_i$分别代替上式中的$\mu_i,i=1,2,\cdots,k$，就以
+    $$\hat{\theta}_i=\theta_i(A_1,A_2,\cdots,A_k),i=1,2,\cdots,k$$
+    分别作为$\theta_i,i=1,2,\cdots,k$的估计量，这种估计量称为{\heiti 矩估计量}，矩估计量的观察值称为{\heiti 矩估计值}.
+\end{definition}
+
+\begin{definition}[最大似然估计法]
+    若总体$X$属离散型，其分布律$P\{X=x\}=p(x;\theta),\theta\in \varTheta$的形式为已知，$\theta$为待估参数，$\varTheta$
+    是$\theta$可能取值的范围.设$X_1,X_2,\cdots,X_n$是来自$X$的样本，则$X_1,X_2,\cdots,X_n$的联合分布律为
+    $$\prod_{i=1}^np(x_i;\theta)$$
+    又设$x_1,x_2,\cdots,x_n$是相应于样本$X_1,X_2,\cdots,X_n$的一个样本值.易知样本$X_1,X_2,\cdots,X_n$取到
+    观察值$x_1,x_2,\cdots,x_n$的概率，亦即事件$\{X_1=x_1,X_2=x_2,\cdots,X_n=x_n\}$发生的概率为
+    $$L(\theta)=L(x_1,x_2,\cdots,x_n;\theta)=\prod_{i=1}^np(x_i;\theta),\theta\in\varTheta$$
+    这一概率随$\theta$的取值而变化，它是$\theta$的函数，$L(\theta)$称为样本的{\heiti 似然函数}。
+    （注意，这里$x_1,x_2,\cdots,x_n$是已知的样本值，它们都是常数）.
+
+    由费希尔引进的最大似然估计法，就是固定样本观察值$x_1,x_2,\cdots,x_n$，在$\theta$取值的可能范围$\varTheta$内挑选使似然函数
+    $L(x_1,x_2,\cdots,x_n;\theta)$达到最大的参数值$\hat{\theta}$，作为参数$\theta$的估计值.即取$\hat{\theta}$使
+    $$L(x_1,x_2,\cdots,x_n;\hat{\theta})=\max\limits_{\theta\in\varTheta}L(x_1,x_2,\cdots,x_n;\theta)$$
+    这样得到的$\hat{\theta}$与样本值$x_1,x_2,\cdots,x_n$有关，常记为$\hat{\theta}(x_1,x_2,\cdots,x_n)$，称为参数$\theta$
+    的{\heiti 最大似然估计值}，而相应的统计量$\hat{\theta}(X_1,X_2,\cdots,X_n)$称为参数$\theta$的{\heiti 最大似然估计量}.
+
+    若总体$X$属连续型，其概率密度$f(x;\theta),\theta\in\varTheta$的形式已知，$\theta$为待估参数，$\varTheta$是$\theta$
+    可能取值的范围.设$X_1,X_2,\cdots,X_n$是来自$X$的样本，则$X_1,X_2,\cdots,X_n$的联合密度为
+    $$\prod_{i=1}^nf(x_i,\theta)$$
+    设$x_1,x_2,\cdots,x_n$是相应于样本$X_1,X_2,\cdots,X_n$的一个样本值，则随机点$(X_1,X_2,\cdots,X_n)$落在点
+    $(x_1,x_2,\cdots,x_n)$的邻域（边长分别为    $\,dx_1,\,dx_2,\cdots,\,dx_n$的$n$维立方体）内的概率近似地为
+    \begin{equation}\tag{1}\label{7.1}
+    \prod_{i=1}^nf(x_i;\theta)\,dx_i
+    \end{equation}
+    其值随$\theta$的取值而变化。与离散型的情况一样，取$\theta$的估计值$\hat{\theta}$使概率\eqref{7.1}取到最大值，但因子
+    $\displaystyle{\prod_{i=1}^n\,dx_i}$不随$\theta$而变，故只考虑函数
+    $$L(\theta)=L(x_1,x_2,\cdots,x_n;\theta)=\prod_{i=1}^nf(x_i;\theta)$$
+    的最大值.这里$L(\theta)$称为样本的{\heiti 似然函数}.若
+    $$L(x_1,x_2,\cdots,x_n;\theta)=\max\limits_{\theta\in \varTheta}L(x_1,x_2,\cdots,x_n;\theta)$$
+    则称$\hat{\theta}(x_1,x_2,\cdots,x_n)$为$\theta$的{\heiti 最大似然估计值}，称$\hat{\theta}(X_1,X_2,\cdots,X_n)$为
+    $\theta$的{\heiti 最大似然估计量}。
+\end{definition}
