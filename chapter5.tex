@@ -28,7 +28,7 @@
 \subsection{中心极限定理}
 \begin{theorem}[独立同分布的中心极限定理]
     设随机变量$X_1,X_2,\cdots,X_n,\cdots$相互独立，服从同一分布，且具有数学期望和方差：$E(X_k)=\mu,D(X_k)=\sigma^2>0(k=1,2,\cdots),$则随机变量
-    之和$\boldsymbol{\sum _{k=1}^n X_k}$的标准化变量
+    之和$\displaystyle{\sum _{k=1}^n X_k}$的标准化变量
     $$Y_n=\frac{\sum\limits _{k=1}^n X_k-E(\sum\limits _{k=1} ^n X_k)}{\sqrt{D(\sum\limits_{k=1}^n X_k)}}=\frac{\sum\limits_{k=1}^n X_k-n\mu}{\sqrt{n}\sigma}$$
     的分布函数$F_n(x)$对于任意$x$满足
     $$\lim _{n\to\infty} F_n(x)=\lim _{n\to \infty}P\left\{ \frac{\sum\limits_{k=1}^n X_k-n\mu}{\sqrt{n}\sigma}\leq x\right\}=\int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}} e^{-t^2/2}\,dt=\varPhi (x)  $$

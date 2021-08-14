@@ -113,3 +113,25 @@
 \end{theorem}
 
 \subsection{估计量的评选标准}
+\begin{definition}[无偏性]
+    若估计量$\hat{\theta}=\hat{\theta}(X_1,X_2,\cdots,X_n)$的数学期望$E(\hat{\theta})$存在，且对于任意$\theta\in \varTheta$有
+    $$E(\hat{\theta})=\theta$$
+    则称$\hat{\theta}$是$\theta$的{\heiti 无偏估计量}。
+\end{definition}
+
+\begin{definition}[有效性]
+    设$\hat{\theta}_1=\hat{\theta}_1(X_1,X_2,\cdots,X_n)$与$\hat{\theta}_2=\hat{\theta}_2(X_1,X_2,\cdots,X_n)$都是
+    $\theta$的无偏估计量，若对于任意$\theta\in \varTheta$，有
+    $$D(\hat{\theta}_1)\leq D(\hat{\theta}_2)$$
+    且至少对于某一个$\theta\in \varTheta$上式中的不等号成立，则称$\hat{\theta}_1$较$\hat{\theta}_2${\heiti 有效}。
+\end{definition}
+
+\begin{definition}[相合性]
+    设$\hat{\theta}(X_1,X_2,\cdots,X_n)$为参数$\theta$的估计量，
+    若对于任意$\theta\in \varTheta$，当$n \to \infty$时$\hat{\theta}(X_1,\\X_2,\cdots,X_n)$
+    依概率收敛于$\theta$，则称$\hat{\theta}$为$\theta$的{\heiti 相合估计量}。
+
+    即，若对任意$\theta\in \varTheta$都满足：对任意$\varepsilon>0$，有
+    $$\lim_{n\to\infty} P\{|\hat{\theta}-\theta|<\varepsilon\}=1$$
+    则称$\hat{\theta}$是$\theta$的{\heiti 相合估计量}。
+\end{definition}

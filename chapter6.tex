@@ -24,7 +24,8 @@
         是一{\heiti 统计量}。
 
         因为$X_1,X_2,\cdots,X_n$都是随机变量，而统计量$g(X_1,X_2,\cdots,X_n)$是随机变量的函数，因此统计量是一个随机变量.
-        设$x_1,x_2,\cdots,x_n$是相应于样本$X_1,X_2,\cdots,X_n$的样本值，则称$g(x_1,x_2,\cdots,x_n)$是$g(X_1,X_2,\cdots,X_n)$的观察值。
+        设$x_1,x_2,\cdots,x_n$是相应于样本$X_1,X_2,\cdots,X_n$的样本值，
+        则称$g(x_1,x_2,\cdots,x_n)$是\\$g(X_1,X_2,\cdots,X_n)$的观察值。
 
         下面列出几个常用的统计量，设$X_1,X_2,\cdots,X_n$是来自总体$X$的一个样本，$x_1,x_2,\cdots,x_n$是这一样本的观察值，定义
 
@@ -48,7 +49,7 @@
 
 \begin{definition}[经验分布函数]
     与总体分布函数$F(x)$相应的统计量——经验分布函数的做法为：
-    设$X_1,X_2,\cdots,X_n$是总体$F$的一个样本，用$S(x),-\infty<x<\infty$表示$X_1,X_2,\cdots,X_n$
+    设$X_1,\\X_2,\cdots,X_n$是总体$F$的一个样本，用$S(x),-\infty<x<\infty$表示$X_1,X_2,\cdots,X_n$
     中不大于$x$的随机变量的个数.定义经验分布函数$F_n(x)$为
     $$F_n(x)=\frac{1}{n}S(x),-\infty<x<\infty$$
 \end{definition}
@@ -160,7 +161,8 @@
 \begin{theorem}
     设$X_1,X_2,\cdot,X_{n_1}$与$Y_1,Y_2,\cdot,Y_{n_2}$分别是来自正态总体$N(\mu_1,\sigma_1^2)$和
     $N(\mu,\sigma_2^2)$的样本，且这两个样本相互独立.设$\displaystyle{\overline{X}=\frac{1}{n_1}\sum_{i=1}^{n_1}X_i}$,
-    $\displaystyle{\overline{Y}=\frac{1}{n_2}\sum_{i=1}^{n_2}Y_i}$分别是这两个样本的样本均值；$\displaystyle{S_1^2=\frac{1}{n_1-1}\sum_{i=1}^{n_1}{(X_i-\overline{X})}^2}$
+    $\displaystyle{\overline{Y}=\frac{1}{n_2}\sum_{i=1}^{n_2}Y_i}$分别是这两个样本的样本均值；\\
+    $\displaystyle{S_1^2=\frac{1}{n_1-1}\sum_{i=1}^{n_1}{(X_i-\overline{X})}^2}$
     ,$\displaystyle{S^2_2=\frac{1}{n_2-1}\sum_{i=1}^{n_2}{(Y_i-\overline{Y})}^2}$分别是这两个样本的样本方差，则有
     \begin{enumerate}[1°]
         \item $\displaystyle{\frac{S_1^2/S_2^2}{\sigma_1^2/\sigma_2^2}\sim F(n_1-1,n_2-1)}$;
