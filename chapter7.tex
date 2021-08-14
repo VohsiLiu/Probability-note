@@ -71,7 +71,45 @@
     $\displaystyle{\prod_{i=1}^n\,dx_i}$不随$\theta$而变，故只考虑函数
     $$L(\theta)=L(x_1,x_2,\cdots,x_n;\theta)=\prod_{i=1}^nf(x_i;\theta)$$
     的最大值.这里$L(\theta)$称为样本的{\heiti 似然函数}.若
-    $$L(x_1,x_2,\cdots,x_n;\theta)=\max\limits_{\theta\in \varTheta}L(x_1,x_2,\cdots,x_n;\theta)$$
+    $$L(x_1,x_2,\cdots,x_n;\hat{\theta})=\max\limits_{\theta\in \varTheta}L(x_1,x_2,\cdots,x_n;\theta)$$
     则称$\hat{\theta}(x_1,x_2,\cdots,x_n)$为$\theta$的{\heiti 最大似然估计值}，称$\hat{\theta}(X_1,X_2,\cdots,X_n)$为
     $\theta$的{\heiti 最大似然估计量}。
+    
+    这样，确定最大似然估计量的问题就归结为微分学中的求最大值的问题了。
+
+    在很多情况下，$p(x;\theta)$和$f(x;\theta)$关于$\theta$可微，这时$\hat{\theta}$常可从方程
+    $$\frac{d}{d\theta}L(\theta)=0$$
+    解得.又因$L(\theta)$和$\ln L(\theta)$在同一$\theta$处取到极值，因此，$\theta$的最大似然估计$\theta$也可以从方程
+    \begin{equation}\tag{2}\label{7.2}
+    \frac{d}{d\theta} \ln L(\theta)=0
+    \end{equation}
+    求得，而从后一方程求解往往比较方便。\eqref{7.2}称为{\heiti 对数似然方程}。
+
+    最大似然估计法也适用于分布中含多个未知参数$\theta_1,\theta_2,\cdots,\theta_k$的情况。这时，似然函数$L$是这些未知参数的函数.
+    分别令
+    $$\frac{\partial}{\partial \theta_i}L=0,i=1,2,\cdots,k$$
+    或令
+    \begin{equation}\tag{3}\label{7.3}
+    \frac{\partial}{\partial \theta_i}\ln L=0,i=1,2,\cdots,k
+    \end{equation}
+    解上述由$k$个方程组成的方程组，即可得到各未知参数$\theta_i(i=1,2,\cdots,k)$的最大似然估计值$\hat{\theta}_i$.
+    \eqref{7.3}称为{\heiti 对数似然方程组}。
 \end{definition}
+
+\begin{theorem}
+    最大似然估计具有下述性质：设$\theta$的函数$u=u(\theta),\theta\in \varTheta$具有单值反函数$\theta=\theta(u),u\in \mathfrak{U}$。又假设
+    $\hat{\theta}$是$X$的概率分布中参数$\theta$的最大似然估计，则$\hat{u}=u(\hat{\theta})$是$u(\theta)$的最大似然估计。这一性质称为最大似然估计的{\heiti 不变性}.
+
+    事实上，因为$\hat{\theta}$是$\theta$的最大似然估计，于是有
+    $$L(x_1,x_2,\cdots,x_n;\theta)=\max\limits_{\theta\in \varTheta}L(x_1,x_2,\cdots,x_n,\theta)$$
+    其中$x_1,x_2,\cdots,x_n$是$X$的一个样本值，考虑到$\hat{u}=u(\hat{\theta})$，且有$\hat{\theta}=\theta(\hat{u})$，上式可写成
+    $$L(x_1,x_2,\cdots,x_n;\theta(\hat{u}))=\max\limits_{u\in \mathfrak{U}}L(x_1,x_2,\cdots,x_n;\theta(u))$$
+    这就证明了$\hat{u}=u(\hat{\theta})$是$u(\theta)$的最大似然估计。
+
+    当总体分布含有多个未知参数时，也具有上述性质。例如$\sigma^2$的最大似然估计为
+    $$\hat{\sigma^2}=\frac{1}{n}\sum_{i=1}^n{(X_i-\overline{X})}^2$$
+    函数$u=u(\sigma^2)=\sqrt{\sigma^2}$有单值反函数$\sigma^2=u^2(u\geq 0)$，根据上述性质，得到标准差$\sigma$的最大似然估计为
+    $$\hat{\sigma}=\sqrt{\hat{\sigma^2}}=\sqrt{\frac{1}{n}\sum_{i=1}^n{(X_i-\overline{X})}^2}$$
+\end{theorem}
+
+\subsection{估计量的评选标准}
