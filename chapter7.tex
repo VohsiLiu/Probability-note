@@ -135,3 +135,42 @@
     $$\lim_{n\to\infty} P\{|\hat{\theta}-\theta|<\varepsilon\}=1$$
     则称$\hat{\theta}$是$\theta$的{\heiti 相合估计量}。
 \end{definition}
+
+\subsection{区间估计}
+\begin{definition}[置信区间]
+    设总体$X$的分布函数$F(x;\theta)$含有一个未知参数$\theta,\theta\in \varTheta$（$\varTheta$是$\theta$可能取值的范围），对于
+    给定值$\alpha(0<\alpha<1)$，若由来自$X$的样本$X_1,X_2,\cdots,X_n$确定的两个统计量$\underline{\theta}=\underline{\theta}(X_1,X_2,\cdots,X_n)$
+    和$\overline{\theta}=\overline{\theta}(X_1,X_2,\cdots,X_n)(\theta<\overline{\theta})$，对于任意$\theta\in\varTheta$满足
+    $$P\{\underline{\theta}(X_1,X_2,\cdots,X_n)<\theta<\overline{\theta}(X_1,X_2,\cdots,X_n)\}\geq 1-\alpha$$
+    则称随机区间$(\underline{\theta},\overline{\theta})$是$\theta$的置信水平为$1-\alpha$的{\heiti 置信区间}，$\underline{\theta}$和$\overline{\theta}$分别称为
+    置信水平为$1-\alpha$的双侧置信区间的{\heiti 置信下限}和{\heiti 置信上限}，$1-\alpha$称为{\heiti 置信水平}。
+
+    当$X$时离散型随机变量时，对于给定的$\alpha$，常常找不到区间$(\underline{\theta},\overline{\theta})$使得$P\{\underline{\theta}<\theta<\overline{\theta}\}$恰为
+    $1-\alpha$。此时去找区间$(\underline{\theta},\overline{\theta})$使得$P\{\underline{\theta}<\theta<\overline{\theta}\}$至少为$1-\alpha$，且尽可能地接近$1-\alpha$.
+\end{definition}
+
+\begin{theorem}
+    寻求未知参数$\theta$的置信区间的具体做法：
+    \begin{enumerate}[1°]
+        \item 寻求一个样本$X_1,X_2,\cdots,X_n$和$\theta$的函数$W=W(X_1,X_2,\cdots,X_n;\theta)$，使得$W$的分布不依赖于
+        $\theta$以及其他未知参数，称具有这种性质的函数$W$为{\heiti 枢轴量}.
+        \item 对于给定的置信水平$1-\alpha$，定出两个常数$a,b$，使得
+        $$P\{a<W(X_1,X_2,\cdots,X_n;\theta)<b\}=1-\alpha$$
+        若能从$a<W(X_1,X_2,\cdots,X_n;\theta)<b$得到与之等价的$\theta$的不等式$\underline{\theta}<\theta<\overline{\theta}$，其中
+        $\underline{\theta}=\underline{\theta}(X_1,X_2,\cdots,X_n),\overline{\theta}=\overline{\theta}(X_1,X_2,\cdots,X_n)$都是统计量。
+        那么$(\underline{\theta},\overline{\theta})$就是$\theta$的一个置信水平为$1-\alpha$的置信区间。
+    \end{enumerate}
+    
+    枢轴量$W(X_1,X_2,\cdots,X_n;\theta)$的构造，通常可以从$\theta$的点估计着手考虑。常用的正态总体的参数的置信区间可以用上述步骤推得。
+\end{theorem}
+
+\subsection{正态总体均值与方差的区间估计}
+
+
+
+
+\subsection{（0-1）分布参数的区间估计}
+
+
+\subsection{单侧置信区间}
+
