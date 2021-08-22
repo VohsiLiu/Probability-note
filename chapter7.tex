@@ -165,12 +165,89 @@
 \end{theorem}
 
 \subsection{正态总体均值与方差的区间估计}
+\begin{theorem}
+    设已给定置信水平为$1-\alpha$，并设$X_1,X_2,\cdots,X_n$为总体$N(\mu,\sigma^2)$的样本。$\overline{X},S^2$分别是样本均值和样本方差。
+    \begin{enumerate}[1.]
+        \item 均值为$\mu$的置信区间
+        \begin{enumerate}[(1)]
+            \item $\sigma^2$为已知，可得$\mu$的一个置信水平为$1-\alpha$的置信区间为
+            $$(\overline{X}\pm \frac{\sigma}{\sqrt{n}}z_{\alpha/2})$$
+            \item $\sigma^2$为未知，可得$\mu$的一个置信水平为$1-\alpha$的置信区间为
+            $$(\overline{X}\pm \frac{S}{\sqrt{n}}t_{\alpha/2}(n-1))$$
+        \end{enumerate}
+        \item 方差$\sigma^2$的置信区间
+            
+        方差$\sigma^2$的一个置信水平为$1-\alpha$的置信区间为
+        $$\left(\frac{(n-1)S^2}{\chi ^2_{\alpha/2}(n-1)},\frac{(n-1)S^2}{\chi^2_{1-\alpha/2}(n-1)}\right)$$
+        标准差$\sigma$的一个置信水平为$1-\alpha$的置信区间为
+        $$\left(\frac{\sqrt{n-1}S}{\sqrt{\chi ^2_{\alpha/2}(n-1)}},\frac{\sqrt{n-1}S}{\sqrt{\chi^2_{1-\alpha/2}(n-1)}}\right)$$
+    \end{enumerate}        
+\end{theorem}
 
-
-
+\begin{theorem}
+    设已给定置信水平为$1-\alpha$，并设$X_1,X_,2,\cdots,X_{n_1}$是来自第一个总体的样本；$Y_1,Y_2,\cdots,Y_{n_2}$是来自第二个
+    总体的样本，这两个样本相互独立。且设$\overline{X},\overline{Y}$分别为第一、第二个总体的样本均值，$S_1^2,S_2^2$分别是第一、第二个
+    总体的样本方差。
+    \begin{enumerate}[1.]
+        \item 两个总体均值差$\mu_1-\mu_2$的置信区间
+        \begin{enumerate}[(1)]
+            \item $\sigma_1^2,\sigma_2^2$均为已知，$\mu_1-\mu_2$的一个置信水平为$1-\alpha$的置信区间$$\left(\overline{X}-\overline{Y}\pm z_{\alpha/2}\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma^2_2}{n_2}}\right)$$
+            \item $\sigma_1^2=\sigma_2^2=\sigma^2$，但$\sigma^2$未知，此时$\mu_1-\mu_2$的一个置信水平为$1-\alpha$的置信区间为
+            $$\left(\overline{X}-\overline{Y}\pm t_{\alpha/2}(n_1+n_2-2)S_w\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}\right)$$
+            此处$\displaystyle{S_w^2=\frac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2},S_w=\sqrt{S_w^2}}$
+        \end{enumerate}
+        \item 两个总体方差比$\sigma_1^2/\sigma_2^2$的置信区间
+        
+        对于总体均值$\mu_1,\mu_2$均为未知时，$\sigma_1^2/\sigma_2^2$的一个置信水平为$1-\alpha$的置信区间为
+        $$\left(\frac{S_1^2}{S_2^2}\frac{1}{F_{\alpha/2}(n_1-1,n_2-1)},\frac{S_1^2}{S_2^2}\frac{1}{F_{1-\alpha/2}(n_1-1,n_2-1)}\right)$$
+    \end{enumerate} 
+\end{theorem}
 
 \subsection{（0-1）分布参数的区间估计}
-
-
+    \begin{theorem}
+        已知$(0-1)$分布的均值和方差分别为$$\mu=p,\sigma^2=p(1-p)$$
+        设$X_1,X_2,\cdots,X_n$是一个样本，因样本容量$n$比较大，由中心极限定理，知
+        $$\frac{\sum\limits_{i=1}^n X_i-np}{\sqrt{np(1-p)}}=\frac{n\overline{X}-np}{\sqrt{np(1-p)}}$$
+        近似地服从$N(0,1)$分布，于是有
+        $$P\left\{-z_{\alpha/2}<\frac{n\overline{X}-np}{\sqrt{np(1-p)}}<z_{\alpha/2}\right\}\approx 1-\alpha$$
+        而不等式
+        \begin{equation}\tag{4}\label{7.6}
+            -z_{\alpha/2}<\frac{n\overline{X}-np}{\sqrt{np(1-p)}}<z_{\alpha/2}
+        \end{equation}
+        等价于
+        $$(n+z^2_{\alpha/2})p^2-(2n\overline{X}+z^2_{\alpha/2})p+n\overline{X}^2<0$$
+        记$$p_1=\frac{1}{2a}(-b-\sqrt{b^2-4ac})$$
+        $$p_2=\frac{1}{2a}(-b+\sqrt{b^2-4ac})$$
+        此处$a=n+z^2_{\alpha/2},b=-(2n\overline{X}+z^2_{\alpha/2}),c=n\overline{X}^2$。于是由\eqref{7.6}式得$p$的一个近似的置信水平为$1-\alpha$的置信区间为
+        $$(p_1,p_2)$$
+    \end{theorem}
+ 
 \subsection{单侧置信区间}
+    \begin{definition}
+        对于给定值$\alpha(0<\alpha<1)$，若由样本$X_1,X_2,\cdots,X_n$确定的统计量$\underline{\theta}=\underline{\theta}(X_1,X_2,\cdots,X_n)$，对于任意$\theta\in \varTheta$满足
+        $$P\{\theta>\underline{\theta}\}\geq 1-\alpha$$
+        称随机区间$(\underline{\theta},\infty)$是$\theta$的置信水平为$1-\alpha$的{\heiti 单侧置信区间}，$\underline{\theta}$称为$\theta$的置信水平为$1-\alpha$的{\heiti 单侧置信下限}。
+
+        又若统计量$\overline{\theta}=\overline{\theta}(X_1,X_2,\cdots,X_n)$，对于任意$\theta\in \varTheta$满足
+        $$P\{\theta<\overline{\theta}\}\geq 1-\alpha$$
+        称随机区间$(-\infty,\overline{\theta})$是$\theta$的置信水平为$1-\alpha$的{\heiti 单侧置信区间}，$\overline{\theta}$称为$\theta$的置信水平为$1-\alpha$的{\heiti 单侧置信上限}。
+
+        例如对于正态总体$X$，若均值$\mu$，方差$\sigma^2$均为未知，设$X_1,X_2,\cdots,X_n$是一个样本，由
+        $$\frac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)$$
+        有$$P\left\{\frac{\overline{X}-\mu}{S/\sqrt{n}}<t_\alpha(n-1)\right\}=1-\alpha$$
+        即$$P\left\{\mu>\overline{X}-\frac{S}{\sqrt{n}}t_\alpha(n-1)\right\}=1-\alpha$$
+        于是得到$\mu$的置信水平为$1-\alpha$的单侧置信区间
+        $$\left(\overline{X}-\frac{S}{\sqrt{n}}t_\alpha(n-1),\infty\right)$$
+        $\mu$的置信水平为$1-\alpha$的单侧置信下限为
+        $$\underline{\mu}=\overline{X}-\frac{S}{\sqrt{n}}t_\alpha(n-1)$$
+        又由$$\frac{(n-1)S^2}{\sigma^2}\sim \chi^2(n-1)$$
+        有
+        $$P\left\{\frac{(n-1)S^2}{\sigma^2}>\chi_{1-\alpha}^2(n-1)\right\}=1-\alpha$$
+        即
+        $$P\left\{\sigma^2<\frac{(n-1)S^2}{\chi_{1-\alpha}^2(n-1)}\right\}=1-\alpha$$
+        于是得$\sigma^2$的置信水平为$1-\alpha$的单侧置信区间
+        $$\left(0,\frac{(n-1)S^2}{\chi_{1-\alpha}^2(n-1)}\right)$$
+        $\sigma^2$的置信水平为$1-\alpha$的单侧置信上限为
+        $$\overline{\sigma^2}=\frac{(n-1)S^2}{\chi_{1-\alpha}^2(n-1)}$$
+    \end{definition}
 
