@@ -17,8 +17,8 @@
 直方图和箱线图的定义及画法略。
 
 \subsection{抽样分布}
+
 \begin{definition}
-    \begin{definition}
         设$X_1,X_2,\cdots,X_n$是来自总体$X$的一个样本，$g(X_1,X_2,\cdots,X_n)$是
         $X_1,X_2,\cdots,X_n$的函数，若$g$中不含未知参数，则称$g(X_1,X_2,\cdots,X_n)$
         是一{\heiti 统计量}。
@@ -44,12 +44,12 @@
         $$s=\sqrt{\frac{1}{n-1}\sum_{i=1}^n{(x_i-\overline{x})}^2}$$
         $$a_k=\frac{1}{n}\sum_{i=1}^nx_i^k,\quad k=1,2,\cdots$$
         $$b_k=\frac{1}{n}\sum_{i=1}^n{(x_i-\overline{x})}^k,\quad k=2,3,\cdots$$
-    \end{definition}
 \end{definition}
+
 
 \begin{definition}[经验分布函数]
     与总体分布函数$F(x)$相应的统计量——经验分布函数的做法为：
-    设$X_1,\\X_2,\cdots,X_n$是总体$F$的一个样本，用$S(x),-\infty<x<\infty$表示$X_1,X_2,\cdots,X_n$
+    设$X_1,X_2,\cdots,X_n$是总体$F$的一个样本，用$S(x),-\infty<x<\infty$表示$X_1,X_2,\cdots,X_n$
     中不大于$x$的随机变量的个数.定义经验分布函数$F_n(x)$为
     $$F_n(x)=\frac{1}{n}S(x),-\infty<x<\infty$$
 \end{definition}
@@ -109,7 +109,7 @@
 \end{definition}
 
 \begin{definition}[$F$分布]
-    设$U\sim \chi^2(n_1),V\sim chi^2(n_2)$，且$U,V$相互独立，则称随机变量
+    设$U\sim \chi^2(n_1),V\sim \chi^2(n_2)$，且$U,V$相互独立，则称随机变量
     $$F=\frac{U/n_1}{V/n_2}$$
     服从自由度为$(n_1,n_2)$的{\heiti $F$分布}，记为$F\sim F(n_1,n_2)$.
 
@@ -139,32 +139,32 @@
 \end{definition}
 
 \begin{theorem}
-    设$X_1,X_2,\cdot,X_n$是来自正态总体$N(\mu,\sigma^2)$的样本，$\overline{X}$是样本均值，则有
+    设$X_1,X_2,\cdots,X_n$是来自正态总体$N(\mu,\sigma^2)$的样本，$\overline{X}$是样本均值，则有
     $$\overline{X}\sim N(\mu,\sigma^2/n)$$
 \end{theorem}
 
 \begin{theorem}
-    设$X_1,X_2,\cdot,X_n$是来自总体$N(\mu,\sigma^2)$的样本，$\overline{X},S^2$分别是样本
+    设$X_1,X_2,\cdots,X_n$是来自总体$N(\mu,\sigma^2)$的样本，$\overline{X},S^2$分别是样本
     均值和样本方差，则有
-    \begin{enumerate}[1°]
+    \begin{enumerate}[1$^{\circ}$]
         \item $\displaystyle{\frac{(n-1)S^2}{\sigma^2}\sim \chi^2(n-1)}$；
         \item $\overline{X}$与$S^2$相互独立
     \end{enumerate} 
 \end{theorem}
 
 \begin{theorem}
-    设$X_1,X_2,\cdot,X_n$是来自总体$N(\mu,\sigma^2)$的样本，$\overline{X},S^2$分别是样本
+    设$X_1,X_2,\cdots,X_n$是来自总体$N(\mu,\sigma^2)$的样本，$\overline{X},S^2$分别是样本
     均值和样本方差，则有
     $$\frac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)$$
 \end{theorem}
 
 \begin{theorem}
-    设$X_1,X_2,\cdot,X_{n_1}$与$Y_1,Y_2,\cdot,Y_{n_2}$分别是来自正态总体$N(\mu_1,\sigma_1^2)$和
+    设$X_1,X_2,\cdots,X_{n_1}$与$Y_1,Y_2,\cdot,Y_{n_2}$分别是来自正态总体$N(\mu_1,\sigma_1^2)$和
     $N(\mu,\sigma_2^2)$的样本，且这两个样本相互独立.设$\displaystyle{\overline{X}=\frac{1}{n_1}\sum_{i=1}^{n_1}X_i}$,
     $\displaystyle{\overline{Y}=\frac{1}{n_2}\sum_{i=1}^{n_2}Y_i}$分别是这两个样本的样本均值；\\
     $\displaystyle{S_1^2=\frac{1}{n_1-1}\sum_{i=1}^{n_1}{(X_i-\overline{X})}^2}$
     ,$\displaystyle{S^2_2=\frac{1}{n_2-1}\sum_{i=1}^{n_2}{(Y_i-\overline{Y})}^2}$分别是这两个样本的样本方差，则有
-    \begin{enumerate}[1°]
+    \begin{enumerate}[1$^{\circ}$]
         \item $\displaystyle{\frac{S_1^2/S_2^2}{\sigma_1^2/\sigma_2^2}\sim F(n_1-1,n_2-1)}$;
         \item 当$\sigma_1^2=\sigma_2^2=\sigma^2$时，
         $$\frac{(\overline{X}-\overline{Y})-(\mu_1-\mu_2)}{S_w\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}\sim t(n_1+n_2-2),$$
